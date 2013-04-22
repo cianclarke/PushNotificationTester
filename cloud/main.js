@@ -28,8 +28,8 @@ function registerUA(params, callback){
        'platform':platform
     }
   }, function(err, res){
-    if (err){
-      console.log(err);
+    if (err || !res.ok){
+      console.log(err || res);
     }
     return callback(err, res);
   
