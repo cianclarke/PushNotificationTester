@@ -27,8 +27,10 @@ function registerUA(params, callback){
        'id':deviceId, 
        'platform':platform
     }
+  }, function(err, res){
+    return callback(err, res);
+  
   });
-  return callback(null, res);
 }
 
 function pushMessages(params, callback){
