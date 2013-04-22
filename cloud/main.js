@@ -28,6 +28,9 @@ function registerUA(params, callback){
        'platform':platform
     }
   }, function(err, res){
+    if (err){
+      console.log(err);
+    }
     return callback(err, res);
   
   });
